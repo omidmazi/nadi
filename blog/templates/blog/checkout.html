@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+نادیه جعفری
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static "blog/about-me.css"%}"/>
+{% endblock %}
+
+{% block content %}
+
+
+<div class ="page-header" style="text-align:center">
+  <h2> لیست سفارش ها </h2>
+</div>
+<div class = "container centerdv">
+  <div>
+    <h3> قیمت کل : <span class="label label-success">
+      {{total_price}} ریال</span></h3><br>
+
+      <div class = "well">
+        <form method = "post" action="complete/" class = "centerdv">
+          {% csrf_token %}
+          <h4>مشخصات دریافت کننده</h4>
+          <b>نام</b>
+          <input type = "text" name="first_name" class="form-control">
+          <br>
+          <b>نام خانوادگی</b>
+          <input type = "text" name="last_name" class="form-control">
+          <br>
+          <b>آدرس</b>
+          <input type = "text" name="address" class="form-control">
+          <br>
+          <b>شهر</b>
+          <input type = "text" name="city" class="form-control">
+          <br>
+          <b>شماره همراه</b>
+          <input type = "text" name="mobile" class="form-control">
+          <br>
+          <b>کد پستی</b>
+          <input type = "text" name="postcode" class="form-control">
+          <br>
+          <b>ایمیل</b>
+          <input type = "text" name="email" class="form-control">
+          <br>
+          <input type="submit" value = "تکمیل سفارش" onclick = " window.location = 'complete_order';" class="btn btn-success">
+        </form>
+      </div>
+      <button type="button" class="btn btn-secondary" onclick = " window.location = 'cart';">بازگشت به مرحله قبل</button>
+  </div>    
+</div>
+{% endblock %}

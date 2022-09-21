@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+نادیه جعفری
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static "blog/about-me.css"%}"/>
+{% endblock %}
+
+{% block content %}
+
+
+<div class = "container centetdv">
+    <h3> Welcome {{order.first_name}} </h3>
+    <br>
+    <h3> Orders </h3>
+    {% for order in orders %}
+    <div class = "well">
+        <b> Name : </b>
+        <br>
+        {{order.first_name}}
+        {{order.last_name}}
+        <br>
+        <b> Address: </b>
+        {{order.address}}
+        {{order.city}}
+        <br>
+        <b> Order Items : </b>
+        <br>
+        {{order.items}}
+        <br>
+        <b>Order Fulfilled? </b>
+        {{order.fullfilled}}
+    </div>
+    {% endfor %}
+
+
+
+
+{% endblock %}

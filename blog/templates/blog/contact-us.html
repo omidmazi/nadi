@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+نادیه جعفری
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static "blog/contact-us.css"%}"/>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="container"> راه های ارتباطی </h1>
+<div class="flex-container row">
+    <div class="col">
+        <img src="{% static "blog\images\logos\you.jpg" %}">
+        <h2> YouTube </h2>
+        <h4> ورود به صفحه یوتیوب </h4>
+        <buttun><a href="https://www.youtube.com/channel/UCO7alBG0M_jNlMSFvR9SBzg">کلیک کنید</a></button>
+    </div>
+    <div class="col">
+        <img src="{% static "blog\images\logos\f.jpg" %}">
+        <h2> Facebook </h2>
+        <h4> ورود به صفحه شخصی فیسبوک </h4>
+        <br>
+        <buttun><a href="https://www.facebook.com/nadie.jafari/">کلیک کنید</a> </button>
+    </div>
+    <div class="col">
+        <img src="{% static "blog\images\logos\ins.jpg" %}">
+        <h2> Instagram </h2>
+        <h4> ورود به صفحه اینستاگرام </h4>
+        <br>
+        <buttun><a href="https://www.instagram.com/nadiejafari/">کلیک کنید</a></button>
+    </div>
+    <div class="col">
+        <img src="{% static "blog\images\logos\g.jpg" %}">
+        <h2> goodreads </h2>
+        <h4> ورود به به صفحه شبکه کتابخوان ها </h4>
+        <buttun><a href="https://www.goodreads.com/author/show/20796486._">کلیک کنید</a></button>
+    </div>
+</div>
+
+{% endblock %}
+    

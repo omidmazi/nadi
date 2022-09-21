@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+نادیه جعفری
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static "blog/cart.css"%}"/>
+{% endblock %}
+
+{% block content %}
+
+
+<div class ="page-header" style="text-align:center">
+  <h2> لیست سفارش ها </h2>
+</div>
+<br>
+<table class="center" id="bookcart">
+    <tr>
+       <th>کتاب</th>
+       <th>قیمت</th>
+       <th>حذف از سبد خرید</th>
+    </tr>
+    {% for item in cart_items %}
+    <tr>
+      <th><p class = "media-heading">{{item.name}}</h4></th>
+      <th><p class = "badge pull-right">{{item.price}}</span></th>
+      <th>
+       <form method="post" action = "remove/">
+         {% csrf_token %}
+         <input type = "hidden" name="obj_id" value={{item.id}}>
+         <br>
+         <input type= "submit" value="حذف از سبد خرید" class="btn btn-danger pull-right">
+       </form> 
+      </th>
+    </tr>
+    {% endfor %}
+    <tr>
+      <th><p> قیمت کل </p></th> 
+      <th><span class="label label-success">
+      {{total_price}} ریال</span></th>
+    </tr>
+</table>
+<br>
+<p> در صورت خرید دو کتاب و بیشتر هزینه پست رایگان خواهد بود. در غیر اینصورت بیست هزار تومان بابت پست دریافت می شود </p>
+<br> 
+<div class="row">
+  <button class = "btn btn-success btn-lg center" onclick = 
+  " window.location = 'checkout';">مرحله بعدی</button>
+</div>
+
+{% endblock %}

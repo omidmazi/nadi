@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+نادیه جعفری
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static "blog/about-me.css"%}"/>
+{% endblock %}
+
+{% block content %}
+
+
+<div class ="page-header" style="text-align:center">
+  <h2> تکمیل سفارش! </h2>
+  <button class = "btn btn-success btn-lg" onclick = " window.location = 'request';">پرداخت!</button>
+  <button class = "btn btn-success btn-lg" onclick = "window.location='/'">بازگشت به صفحه اصلی</button>
+</div>
+
+{% endblock %}

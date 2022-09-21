@@ -1,0 +1,50 @@
+.centerdv {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.imgscale {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+h2 {
+    color: darkorange;
+    font-size: large;
+    padding-top: 100px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bookcart {
+    border-collapse: collapse;
+    font-size: medium;
+    width: 50%;
+}
+
+#bookcart td,
+#bookcart th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#bookcart tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#bookcart tr:hover {
+    background-color: #ddd;
+}
+
+#bookcart th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}

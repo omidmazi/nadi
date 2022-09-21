@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+نادیه جعفری
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static "blog/books.css"%}"/>
+{% endblock %}
+
+{% block content %}
+<div class="flex-container">
+    <div class="row justify-content-end">
+    {% for product in store_items %}
+      <div class="col-md-4 col-xd-12">
+        <img src={{product.imglink}}>
+        <h2>{{product.name}}</h2>
+        <p>{{product.description}}</p>
+        <button ><a href={{product.taghchelink}} >خرید از طاقچه</a></button>
+        <div class="row"> 
+          <form method = "post">
+            {% csrf_token %}
+            <input type="submit" value = "اضافه به سبد خرید" class = "btn btn-success">
+            <input type="hidden" name="obj_id" value={{product.id}}>
+          </form>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+</div>
+<div>
+    <ul>
+       <li><a class="books" href="cart">سبد خرید:(
+           {{cart_size}}) کتاب </a>
+       </li>
+       <li><a class="books" href="/cart/checkout">پرداخت</a></li>
+    </ul>
+   </div>
+{% endblock %}

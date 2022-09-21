@@ -1,0 +1,73 @@
+.flex-container {
+    display: flex;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+
+.col-4 {
+    width: 30% !important;
+    text-align: -moz-center !important;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: aquamarine;
+    text-shadow: 1px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    color: aquamarine;
+}
+
+img {
+    display: block;
+    max-width: 250px;
+    border: 5px;
+    border-radius: 4px;
+    margin: auto;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px !important;
+    pointer-events: stroke;
+}
+
+button:hover {
+    background-color: orangered;
+}
+
+button a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+button a:link {
+    color: darksalmon !important;
+    text-decoration: none !important;
+}
+
+button a:hover {
+    color: aqua !important;
+    text-decoration: none;
+}
+
+.books {
+    color: aqua;
+}
+
+ul {
+    list-style-type: none
+}
+
+a {
+    text-decoration: none !important;
+}

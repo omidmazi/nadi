@@ -1,0 +1,18 @@
+main {
+    margin-right: 0rem !important;
+}
+
+.carousels {
+    height: auto;
+    transition: 40ms;
+}
+
+.carousels .carousel-inner {
+    height: fit-content;
+    opacity: 90%;
+    z-index: -2;
+}
+
+.carousels .carousel-item {
+    max-height: 700px;
+}
