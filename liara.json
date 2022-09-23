@@ -1,0 +1,7 @@
+{
+    "app": "nadiejafari",
+    "disks": [{
+        "name": "sqlite",
+        "mountTo": "data"
+    }]
+}
