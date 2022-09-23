@@ -1,0 +1,89 @@
+* {
+    direction: rtl;
+    font-family: 'Readex Pro', sans-serif;
+    font-family: 'Vazirmatn', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    max-width: 30%;
+    margin-right: 2px;
+    margin-left: 2px;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0rem;
+    height: 90%;
+    z-index: 100;
+    position: top 0;
+    text-align: justify;
+}
+
+.navbar-brand {
+    font-size: calc(0.7rem + 2vw);
+    color: rgb(252, 252, 252);
+    padding-top: 50px;
+    text-align: center;
+    margin-right: 0.2px;
+    white-space: inherit;
+}
+
+.navbar-brand:hover {
+    color: rgb(255, 199, 199);
+}
+
+header h1 #brand {
+    padding-top: 50px;
+}
+
+header h2 {
+    font-size: calc(0.6rem + 0.15vw);
+    color: rgb(5, 5, 5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+header ul {
+    font-size: calc(0.7rem + 1vw);
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav {
+    padding-right: 0.2px;
+}
+
+header .nav-link {
+    color: ghostwhite;
+}
+
+header .nav-link:hover {
+    color: rgb(255, 169, 169);
+}
+
+header .nav-link:active {
+    color: rgb(253, 83, 83);
+}
+
+header li a:hover {
+    color: rgb(255, 199, 199);
+    background-color: grey;
+}
+
+header {
+    width: 15%;
+    float: right;
+}
+
+#main-container {
+    width: 85%;
+    float: left;
+}
